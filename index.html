@@ -7,23 +7,41 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="bw.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Black Hawk</div>
-        <ul class="nav-links">
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="pages/caps.html">Caps</a></li>
-        </ul>
-        <div class="nav-icons">
-            <i class="fas fa-search"></i>
-            <i class="fas fa-shopping-bag"></i>
-        </div>
-    </nav>
+
+        <nav class="navbar">
+
+                <ul class="sidebar">
+                <li onclick=hidesidebar()><a href="#"><span class="material-symbols-outlined">close</span></a></li>
+                <li><a href="index.html">New Arrivals</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="pages/caps.html">Caps</a></li>
+            </ul>
+            <ul>
+                <li><div class="logo">Black Hawk</div></li>
+                <li class="hideOnMobile"><a href="index.html">New Arrivals</a></li>
+                <li class="hideOnMobile"><a href="#">Men</a></li>
+                <li class="hideOnMobile"><a href="#">Women</a></li>
+                <li class="hideOnMobile"><a href="pages/caps.html">Caps</a></li>
+                <li class="menu-button" onclick=showsidebar()><a href="#"><span class="material-symbols-outlined">menu</span></a></li>
+            </ul>
+        </nav>
+
+        <script>
+            function showsidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+            function hidesidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+        </script>
 
     <header class="hero">
         <div class="hero-content">
