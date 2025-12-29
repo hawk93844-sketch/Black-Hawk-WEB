@@ -231,11 +231,22 @@ footer {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; /* In a real site, you'd use a hamburger menu */
-    }
     .hero-content h1 {
         font-size: 35px;
     }
+}
 
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
 }
